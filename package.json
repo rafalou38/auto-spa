@@ -1,17 +1,24 @@
 {
   "name": "auto-spa",
-  "version": "1.0.1",
-  "description": "Automatically convert your basic html webpage in a fast switching spa.",
-  "main": "dist/index.js",
+  "version": "1.0.2",
+  "description": "Automatically convert your basic html webpage in a fast spa.",
   "repository": "https://github.com/rafalou38/auto-spa",
   "author": "Rafael MC",
   "license": "MIT",
+  "main": "dist/index.min.js",
+  "types": "src/types.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "typescript": "^4.7.4",
     "uglifyjs": "^2.4.11"
   },
   "scripts": {
     "build": "tsc --build",
-    "minify": "uglifyjs ./dist/index.js > ./dist/index.min.js"
+    "minify": "uglifyjs ./dist/index.js > ./dist/index.min.js",
+    "prepublish": "run-s build minify"
   }
 }
