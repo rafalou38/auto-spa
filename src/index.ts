@@ -5,21 +5,7 @@ function getProgressBar(): HTMLDivElement {
   if (progressBar) return progressBar;
   progressBar = document.createElement("div");
   const style = document.createElement("style");
-  style.innerHTML = `
-    #auto-spa-progress{
-      width: 100vw;
-      height: 4px;
-      background: #222;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    #auto-spa-progress .progress{
-      height: 4px;
-      background: #ddd;
-      width: 0%;
-    }
-  `;
+  style.innerHTML = `#auto-spa-progress{width: 100vw;height: 4px;background: #222;position: absolute;top: 0;left: 0;}#auto-spa-progress .progress{height: 4px;background: #ddd;width: 0%;}`;
   document.head.prepend(style);
   progressBar.id = "auto-spa-progress";
   progressBar.innerHTML = `<div class="progress"></div>`;
