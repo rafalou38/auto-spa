@@ -4,6 +4,12 @@ This is a lightweight script supposed to transform your website routing to make 
 
 This script may not work in your project if your stylesheets are ordered in a strange manner because the script appends only the new styles to the head and leaves the old ones in place.
 
+## Usage
+
+```html
+<script src="https://raw.githubusercontent.com/rafalou38/auto-spa/master/dist/index.min.js"></script>
+```
+
 ## Customization
 
 Right now, you can only customize the progressbar.
