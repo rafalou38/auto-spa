@@ -1,0 +1,27 @@
+body {
+  background: #181818;
+  color: white;
+  font-family: sans-serif;
+}
+
+nav {
+  background: #282828;
+  padding: 1rem;
+}
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+nav a {
+  color: rgb(165, 213, 255);
+}
+
+img {
+  width: 100%;
+}
+#auto-spa-progress{
+      width: 100vw;
+      height: 4px;
+      background: #222;
+    }

@@ -1,0 +1,16 @@
+{
+  "name": "auto-spa",
+  "version": "1.0.0",
+  "description": "Automatically convert your basic html webpage in a fast switching spa.",
+  "main": "dist/index.js",
+  "repository": "none",
+  "author": "Rafael MC",
+  "license": "MIT",
+  "dependencies": {
+    "astro-spa": "^1.3.9",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "build": "tsc --build"
+  }
+}
