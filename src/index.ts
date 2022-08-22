@@ -4,7 +4,7 @@
     if (progressBar) return progressBar;
     progressBar = document.createElement("div");
     const style = document.createElement("style");
-    style.innerHTML = `#auto-spa-progress{width: 100vw;height: 4px;background: #222;position: absolute;top: 0;left: 0;}#auto-spa-progress .progress{height: 4px;background: #ddd;width: 0%;}`;
+    style.innerHTML = `#auto-spa-progress{width: 100vw;height: 4px;background: #ddd;position: absolute;top: 0;left: 0;}#auto-spa-progress .progress{height: 4px;background: #222;width: 0%;transition: width 0.5s ease;}`;
     document.head.prepend(style);
     progressBar.id = "auto-spa-progress";
     progressBar.innerHTML = `<div class="progress"></div>`;
@@ -13,9 +13,13 @@
   }
 
   function showProgress(progress: number) {
-    getProgressBar().style.width = progress + "%";
+    const progressE = getProgressBar().firstChild;
+    if (!(progressE instanceof HTMLDivElement)) {
+      progressBar = undefined;
+      return;
+    }
+    progressE.style.width = progress + "%";
   }
-  let progressStep = 0;
   let current = 0;
   function slowProgress(level: number) {
     current += (level - current) / 6;
@@ -133,6 +137,7 @@
       // If no new styles are added, there is no need to wait styleLoaded
       document.body.innerHTML = newDoc.body.innerHTML;
       stylesToRemove.forEach((e) => e.remove());
+      progressBar = undefined;
     }
   }
 

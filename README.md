@@ -31,5 +31,6 @@ Default styles:
   height: 4px;
   background: #ddd;
   width: 0%;
+  transition: width 0.5s ease;
 }
 ```
