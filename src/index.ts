@@ -1,6 +1,6 @@
 (() => {
-  // SSR
-  if (!document) return;
+  // disable for node > SSR
+  if (typeof window === "undefined") return;
 
   let progressBar: HTMLDivElement | undefined;
   function getProgressBar(): HTMLDivElement {
