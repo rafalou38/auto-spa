@@ -1,4 +1,7 @@
 (() => {
+  // SSR
+  if (!document) return;
+
   let progressBar: HTMLDivElement | undefined;
   function getProgressBar(): HTMLDivElement {
     if (progressBar) return progressBar;

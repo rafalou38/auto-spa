@@ -1,9 +1,9 @@
 {
   "name": "auto-spa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically convert your basic html webpage in a fast switching spa.",
   "main": "dist/index.js",
-  "repository": "none",
+  "repository": "https://github.com/rafalou38/auto-spa",
   "author": "Rafael MC",
   "license": "MIT",
   "devDependencies": {

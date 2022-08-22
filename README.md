@@ -7,7 +7,7 @@ This script may not work in your project if your stylesheets are ordered in a st
 ## Usage
 
 ```html
-<script src="https://raw.githubusercontent.com/rafalou38/auto-spa/master/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/auto-spa"></script>
 ```
 
 ## Customization
