@@ -147,10 +147,11 @@
   document.onclick = async (e) => {
     const root = document.body;
     if (!(e.target instanceof HTMLAnchorElement) || !root) return;
+    const href = e.target.href;
+
+    if (href.startsWith("http")) return;
 
     e.preventDefault();
-
-    const href = e.target.href;
 
     loadPage(href);
 
