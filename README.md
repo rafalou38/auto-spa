@@ -1,3 +1,5 @@
+> NOTICE: I made this script for my personal use, so you may expect some bugs and it may not work in your case.
+
 # Automatic spa routing
 
 This is a lightweight script (4k unpacked) to transform your website routing to make it look faster and add a progress-bar.
