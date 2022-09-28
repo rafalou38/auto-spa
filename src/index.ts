@@ -16,6 +16,7 @@
   }
 
   function showProgress(progress: number) {
+    console.debug("progress:", progress);
     const progressE = getProgressBar().firstChild;
     if (!(progressE instanceof HTMLDivElement)) {
       progressBar = undefined;
@@ -73,6 +74,7 @@
   }
 
   async function loadPage(url: string) {
+    console.debug("Loading page:", url);
     const newDoc = await fetchPage(url);
 
     // Head
@@ -142,14 +144,27 @@
       stylesToRemove.forEach((e) => e.remove());
       progressBar = undefined;
     }
+
+    console.debug("Page loaded");
+    afterLoad(url);
   }
 
   document.onclick = async (e) => {
     const root = document.body;
-    if (!(e.target instanceof HTMLAnchorElement) || !root) return;
-    const href = e.target.href;
+    if (!root) return;
+    debugger;
+    let target = e.target as HTMLElement | null | undefined;
+    if (!(target instanceof HTMLElement)) return;
 
-    if (href.startsWith("http")) return;
+    if (!(target instanceof HTMLAnchorElement))
+      if (!((target = target?.parentElement) instanceof HTMLAnchorElement))
+        if (!((target = target?.parentElement) instanceof HTMLAnchorElement))
+          if (!((target = target?.parentElement) instanceof HTMLAnchorElement))
+            return;
+
+    const href = target.href;
+
+    if (!href.startsWith("http")) return;
 
     e.preventDefault();
 
@@ -161,4 +176,16 @@
   window.onpopstate = (e) => {
     loadPage(document.URL);
   };
+
+  function afterLoad(url: string) {
+    const fragment = url.match("#.+")?.[0];
+    if (!fragment) return;
+
+    console.debug("scrolling to fragment:", fragment);
+
+    const target = document.querySelector(fragment);
+    target?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
 })();

@@ -18,6 +18,7 @@
   },
   "scripts": {
     "build": "tsc --build",
+    "watch": "tsc --watch",
     "minify": "uglifyjs ./dist/index.js > ./dist/index.min.js",
     "prepublish": "run-s build minify"
   }
