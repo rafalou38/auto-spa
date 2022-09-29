@@ -2,7 +2,7 @@
 
 # Automatic spa routing
 
-This is a lightweight script (4k unpacked) to transform your website routing to make it look faster and add a progress-bar.
+This is a lightweight script (~4k unpacked) to transform your website routing to make it look faster and add a progress-bar.
 
 This script may not work in your project if your stylesheets are ordered in a strange manner because the script appends only the new styles to the head and leaves the old ones in place.
 

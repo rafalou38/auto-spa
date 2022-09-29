@@ -559,10 +559,10 @@
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.7.4.tgz"
   "version" "4.7.4"
 
-"uglifyjs@^2.4.11":
-  "integrity" "sha512-iR5+eXZCsoqmlzqYYENJm+rtX/KpC+jhhCtgORtBeVxRET+mfFHlyArl3DgYEqRTVDOxenv0OojFg02tf6LluA=="
-  "resolved" "https://registry.npmjs.org/uglifyjs/-/uglifyjs-2.4.11.tgz"
-  "version" "2.4.11"
+uglify-js@^3.17.2:
+  version "3.17.2"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.17.2.tgz#f55f668b9a64b213977ae688703b6bbb7ca861c6"
+  integrity sha512-bbxglRjsGQMchfvXZNusUcYgiB9Hx2K4AHYXQy2DITZ9Rd+JzhX7+hoocE5Winr7z2oHvPsekkBwXtigvxevXg==
 
 "unbox-primitive@^1.0.2":
   "integrity" "sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw=="
