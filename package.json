@@ -1,6 +1,6 @@
 {
   "name": "auto-spa",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Automatically convert your basic html webpage in a fast spa.",
   "repository": "https://github.com/rafalou38/auto-spa",
   "author": "Rafael MC",
@@ -14,7 +14,7 @@
   "devDependencies": {
     "npm-run-all": "^4.1.5",
     "typescript": "^4.7.4",
-    "uglifyjs": "^2.4.11"
+    "uglify-js": "^3.17.2"
   },
   "scripts": {
     "build": "tsc --build",
