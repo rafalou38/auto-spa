@@ -1,6 +1,6 @@
 {
   "name": "auto-spa",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Automatically convert your basic html webpage in a fast spa.",
   "repository": "https://github.com/rafalou38/auto-spa",
   "author": "Rafael MC",

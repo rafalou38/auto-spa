@@ -1,4 +1,6 @@
 (() => {
+  const DOMAIN_REGEX = /https?:\/\/.+(?=\/)/;
+
   // disable for node > SSR
   if (typeof window === "undefined") return;
 
@@ -148,8 +150,10 @@
     const root = document.body;
     if (!(e.target instanceof HTMLAnchorElement) || !root) return;
     const href = e.target.href;
+    const domain = document.URL.match(DOMAIN_REGEX)?.[0];
+    const targetDomain = href.match(DOMAIN_REGEX)?.[0];
 
-    if (href.startsWith("http")) return;
+    if (domain != targetDomain) return;
 
     e.preventDefault();
 
